@@ -1,5 +1,7 @@
 import React, { useContext } from "react";
 import { WindowSizeContext } from "../context/WindowSizeContext";
+import logo from "../assets/logo.svg";
+import menu from "../assets/menu.svg";
 import user from "../assets/user.svg";
 
 function Header() {
@@ -8,7 +10,7 @@ function Header() {
   return (
     <header className="py-5 px-8 md:px-12 flex justify-between items-center">
       <div className="flex items-center">
-        <img src="/src/assets/logo.svg" alt="logo" />
+        <img src={logo} alt="logo" />
         <h1 className="pl-4 font-spacemono text-white font-bold text-xl lg:text-xl">
           NFT Marketplace
         </h1>
@@ -16,7 +18,7 @@ function Header() {
 
       {windowSize < 769 ? (
         <div>
-          <img src="/src/assets/burger-menu.svg" alt="menu" />
+          <img src={menu} alt="menu" />
         </div>
       ) : (
         <div>

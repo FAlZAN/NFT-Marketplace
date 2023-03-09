@@ -18,8 +18,13 @@ function HowItWorksSection() {
       </div>
 
       <div className="py-10  grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-4  lg:gap-x-7">
-        {GET_STARTED.map((item) => (
-          <InfoCard image={item.image} title={item.title} desc={item.desc} />
+        {GET_STARTED.map((item, index) => (
+          <InfoCard
+            key={index}
+            image={item.image}
+            title={item.title}
+            desc={item.desc}
+          />
         ))}
       </div>
     </section>
