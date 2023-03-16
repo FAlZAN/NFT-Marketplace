@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { COMMUNITY_LOGO } from "../assets/index";
 import envelope from "../assets/envelope-2.svg";
 import logo from "../assets/logo.svg";
@@ -8,12 +9,15 @@ function Footer() {
     <footer className="bg-[#3b3b3b] py-8 px-8 md:px-12  flex flex-col gap-y-5">
       <div className="py-8 border-b-2 border-[#858584]  flex flex-col lg:flex-row lg:justify-between gap-y-7">
         <div className="text-[#cccccc] font-worksans  flex flex-col gap-y-5">
-          <div className="flex gap-x-4">
-            <img src={logo} alt="logo" />
-            <h5 className="text-white text-2xl font-bold font-spacemono">
-              NFT Marketplace
-            </h5>
-          </div>
+          <Link to="/">
+            <div className="flex gap-x-4">
+              <img src={logo} alt="logo" />
+              <h5 className="text-white text-2xl font-bold font-spacemono">
+                NFT Marketplace
+              </h5>
+            </div>
+          </Link>
+
           <div>
             <p>NFT marketplace UI created with Anima for Figma.</p>
           </div>
@@ -49,7 +53,9 @@ function Footer() {
               <p>Rankings</p>
             </li>
             <li>
-              <p>Connect a wallet</p>
+              <Link to="/wallet">
+                <p>Connect a wallet</p>
+              </Link>
             </li>
           </ul>
         </div>
